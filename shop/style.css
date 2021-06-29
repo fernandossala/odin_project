@@ -1,0 +1,73 @@
+body, html{
+    height: 100vh;
+    background-color: wheat;
+}
+body{
+    margin: 0;
+    display: grid;
+    background-color: whitesmoke;
+    grid-template-columns: auto 27% 27% 27%;
+    grid-template-rows: 8% 30% auto 10%;
+    grid-template-areas: 
+    "sidebar header header header"
+    "sidebar section1 section2 section3"
+    "sidebar main main main"
+    "footer footer footer footer";
+}
+
+aside{
+
+    grid-area: sidebar;
+    background-color: lavenderblush;
+}
+
+header{
+    grid-area: header;
+    background-color: lightblue;
+}
+
+#sect1{
+    grid-area: section1;
+    background-color: lightpink;
+
+}
+
+#sect2{
+    grid-area: section2;
+    background-color: rgb(255, 128, 147);
+
+}
+
+#sect3{
+    grid-area: section3;
+    background-color: rgb(255, 38, 71);
+
+}
+
+main{
+    grid-area: main;
+    background-color: lightseagreen;
+}
+
+footer{
+    grid-area: footer;
+    background-color: lightyellow;
+}
+
+@media only screen and (max-width: 768px){
+    body{
+        margin: 0;
+        display: grid;
+        background-color: whitesmoke;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(auto, 5);
+        grid-template-areas: 
+        "section1"
+        "section2"
+        "section3"
+        "main"
+        "footer";
+    }
+
+
+}
